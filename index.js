@@ -67,7 +67,7 @@ let getIndexOfOldSibling = function (command) {
 
 let getLastIndentIndex = function (colorReservationList, command, destination) {
   let countOfReservedColors = colorReservation.length;
-  if (countOfReservedColors == 0) {
+  if (countOfReservedColors == 0 || !colorReservationList[countOfReservedColors - 1].destination) {
     return 0;
   }
 
