@@ -26,7 +26,7 @@ let generate = {
 
 let isScopeOpened = function (command, indent) {
   for (var i = colorReservation.length - 1; i >= 0; i--) {
-    if (colorReservation[i].command == command && colorReservation[i].destination == 'start' && colorReservation[i].indent == indent && colorReservation[i].isClosed != true) {
+    if (colorReservation[i].command == command && colorReservation[i].destination == 'begin' && colorReservation[i].indent == indent && colorReservation[i].isClosed != true) {
       return true;
     }
   }
@@ -57,7 +57,7 @@ let colorParamsGenerate = function (index) {
 };
 let getIndexOfOldSibling = function (command) {
   for (var i = colorReservation.length - 1; i >= 0; i--) {
-    if (colorReservation[i].command == command && colorReservation[i].destination == 'start' && !colorReservation[i].isClosed) {
+    if (colorReservation[i].command == command && colorReservation[i].destination == 'begin' && !colorReservation[i].isClosed) {
       return i;
     }
   }
@@ -71,7 +71,7 @@ let getLastIndentIndex = function (colorReservationList, command, destination) {
     return 0;
   }
 
-  if (destination == 'start') {
+  if (destination == 'begin') {
     return colorReservationList[countOfReservedColors - 1].indent + 1;
   } else if (destination == 'end') {
     let indexOfOldSibling = getIndexOfOldSibling(command);
