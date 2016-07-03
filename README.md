@@ -19,6 +19,10 @@ logger(4);
 logger(3);
 logger(2);
 logger(1);
+
+logger(1);
+logger(2);
+logger(1);
 ```
 
 ```
