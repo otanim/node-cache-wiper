@@ -21,6 +21,28 @@ let generate = {
     }
 
     return indents;
+  },
+
+  color: function (index) {
+    const colorList = [
+      'white',
+      'green',
+      'yellow',
+      'gray',
+      'magenta',
+      'cyan',
+      'red'
+    ];
+
+    let countOfColors = colorList.length;
+
+
+    let indexOfColor =
+      index < countOfColors ?
+        index :
+      index % countOfColors;
+
+    return colorList[indexOfColor]
   }
 };
 
@@ -34,27 +56,6 @@ let isScopeOpened = function (command, indent) {
   return false;
 };
 
-let colorParamsGenerate = function (index) {
-  const colorList = [
-    'white',
-    'green',
-    'yellow',
-    'gray',
-    'magenta',
-    'cyan',
-    'red'
-  ];
-
-  let countOfColors = colorList.length;
-
-
-  let indexOfColor =
-    index < countOfColors ?
-      index :
-    index % countOfColors;
-
-  return colorList[indexOfColor]
-};
 let getIndexOfOldSibling = function (command) {
   for (var i = colorReservation.length - 1; i >= 0; i--) {
     if (colorReservation[i].command == command && colorReservation[i].destination == 'begin' && !colorReservation[i].isClosed) {
@@ -67,12 +68,21 @@ let getIndexOfOldSibling = function (command) {
 
 let getLastIndentIndex = function (colorReservationList, command, destination) {
   let countOfReservedColors = colorReservation.length;
-  if (countOfReservedColors == 0 || !colorReservationList[countOfReservedColors - 1].destination) {
+  if (countOfReservedColors == 0) {
     return 0;
   }
 
   if (destination == 'begin') {
-    return colorReservationList[countOfReservedColors - 1].indent + 1;
+    for (var i = colorReservation.length - 1; i >= 0; i--) {
+      if (colorReservationList[i].destination) {
+        break;
+      }
+    }
+    if (i != -1) {
+      return colorReservationList[i].indent + 1;
+    }
+
+    return colorReservationList[countOfReservedColors - 1].indent;
   } else if (destination == 'end') {
     let indexOfOldSibling = getIndexOfOldSibling(command);
     let sibling = colorReservation[indexOfOldSibling];
@@ -81,10 +91,14 @@ let getLastIndentIndex = function (colorReservationList, command, destination) {
     }
   }
 
+  if (colorReservationList[countOfReservedColors - 1].destination == 'begin') {
+    return colorReservationList[countOfReservedColors - 1].indent + 1;
+  }
+
   return colorReservationList[countOfReservedColors - 1].indent;
 };
 
-console.llog = module.exports = function (command, destination) {
+console.llog = exports.log = function (command, destination) {
   let env = process.env.NODE_ENV;
   if (env != 'testing') {
     return;
@@ -95,7 +109,7 @@ console.llog = module.exports = function (command, destination) {
   let indent = getLastIndentIndex(colorReservation, command, destination);
   if (!isScopeOpened(command, indent)) {
     let countOfReservedColors = colorReservation.length;
-    color = colorParamsGenerate(countOfReservedColors);
+    color = generate.color(countOfReservedColors);
   } else {
     let indexOfOldSibling = getIndexOfOldSibling(command);
     colorReservation[indexOfOldSibling].isClosed = true;
@@ -116,4 +130,8 @@ console.llog = module.exports = function (command, destination) {
   let text = indents + colors[color](command);
 
   console.log(text);
+};
+
+exports.init = function () {
+  colorReservation = [];
 };
