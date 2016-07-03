@@ -81,7 +81,7 @@ let getLastIndentIndex = function (colorReservationList, command) {
     return colorReservationList[countOfReservedColors - 1].indent + 1;
 };
 
-module.exports = function (command) {
+console.llog = function (command) {
     let env = process.env.NODE_ENV;
     if (env != 'testing') {
         return;
