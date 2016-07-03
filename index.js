@@ -67,7 +67,7 @@ let oldSibling = function (command) {
   return false;
 };
 
-let getLastIndentIndex = function (colorReservationList, command, isSingle) {
+let getLastIndentIndex = function (colorReservationList, command, isSingle = false) {
   let countOfReservedColors = colorReservation.length;
   if (countOfReservedColors == 0) {
     return 0;
@@ -85,7 +85,7 @@ let getLastIndentIndex = function (colorReservationList, command, isSingle) {
   return colorReservationList[countOfReservedColors - 1].indent + 1;
 };
 
-console.llog = function (command, isSingle) {
+console.llog = module.exports = function (command, isSingle) {
   let env = process.env.NODE_ENV;
   if (env != 'testing') {
     return;
