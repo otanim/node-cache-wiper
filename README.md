@@ -1,4 +1,4 @@
-# Armenian transliteration library.
+# Logger tool for [linguacode-api](https://github.com/LinguaCode/linguacode-api).
 
 ## Install
 
