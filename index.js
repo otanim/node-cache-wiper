@@ -1,7 +1,6 @@
 let _ = require('lodash');
 let colors = require('colors');
 
-let env = process.env.NODE_ENV;
 let colorReservation = [];
 
 let isScopeOpened = function (command) {
@@ -83,6 +82,7 @@ let getLastIndentIndex = function (colorReservationList, command) {
 };
 
 module.exports = function (command) {
+    let env = process.env.NODE_ENV;
     if (env != 'testing') {
         return;
     }
