@@ -10,7 +10,9 @@ $ npm install https://github.com/LinguaCode/linguacode-logger --save
 ## Usage
 
 ### Code
-`var logger = require('linguacode-logger');` - require the **linguacode-logger** module.
+```javascript
+var logger = require('linguacode-logger');
+``` - require the **linguacode-logger** module.
 
 `logger.log(message)` - prints single `message`.
 `console.logg(message)` - same as `logger.log`.
