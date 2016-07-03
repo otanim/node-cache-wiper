@@ -9,6 +9,7 @@ $ npm install https://github.com/LinguaCode/linguacode-logger --save
 
 ## Usage
 
+### Code
 ```javascript
 var logger = require('linguacode-logger');
 
@@ -25,6 +26,7 @@ logger(2);
 logger(1);
 ```
 
+### Result
 ```
 1
     2
