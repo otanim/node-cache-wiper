@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ npm install https://github.com/LinguaCode/linguacode-logger --save
+$ npm install https://github.com/LinguaCode/linguacode-lloger --save
 ```
 
 
@@ -11,19 +11,19 @@ $ npm install https://github.com/LinguaCode/linguacode-logger --save
 
 ### Code
 ```javascript
-var logger = require('linguacode-logger');
+var lloger = require('linguacode-lloger');
 
-logger(1);
-logger(2);
-logger(3);
-logger(4);
-logger(3);
-logger(2);
-logger(1);
+lloger(1);
+lloger(2);
+lloger(3);
+lloger(4);
+lloger(3);
+lloger(2);
+lloger(1);
 
-logger(1);
-logger(2);
-logger(1);
+console.llog(1);
+console.llog(2);
+console.llog(1);
 ```
 
 ### Result
@@ -41,4 +41,4 @@ logger(1);
 ```
 
 ##License
-LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-logger/blob/master/LICENSE.txt).
+LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-lloger/blob/master/LICENSE.txt).
