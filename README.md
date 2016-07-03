@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ npm install https://github.com/LinguaCode/linguacode-lloger --save
+$ npm install https://github.com/LinguaCode/linguacode-logger --save
 ```
 
 
