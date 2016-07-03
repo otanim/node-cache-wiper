@@ -137,6 +137,3 @@ console.llog = exports.log = function (command, destination) {
 exports.init = function () {
   colorReservation = [];
 };
-
-
-process.env.NODE_ENV = 'testing';
