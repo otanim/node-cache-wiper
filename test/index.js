@@ -110,6 +110,18 @@ describe('variations', function () {
     sinon.assert.calledWithExactly(console.log, 'single 2');
   });
 
+  it('1st level; 1st level', function () {
+    console.llog('1st level', 'begin');
+    console.llog('1st level', 'end');
+    console.llog('1st level', 'begin');
+    console.llog('1st level', 'end');
+
+    sinon.assert.calledWithExactly(console.log, '1st level');
+    sinon.assert.calledWithExactly(console.log, '1st level');
+    sinon.assert.calledWithExactly(console.log, '1st level');
+    sinon.assert.calledWithExactly(console.log, '1st level');
+  });
+
   it('complex', function () {
     console.llog('single 1');
     console.llog('1st level', 'begin');

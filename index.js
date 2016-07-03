@@ -74,7 +74,7 @@ let getLastIndentIndex = function (colorReservationList, command, destination) {
 
   if (destination == 'begin') {
     for (var i = colorReservation.length - 1; i >= 0; i--) {
-      if (colorReservationList[i].destination) {
+      if (colorReservationList[i].destination && !colorReservationList[i].isClosed) {
         break;
       }
     }
@@ -106,6 +106,7 @@ console.llog = exports.log = function (command, destination) {
 
   let color;
   let indents;
+  let isClosed = false;
   let indent = getLastIndentIndex(colorReservation, command, destination);
   if (!isScopeOpened(command, indent)) {
     let countOfReservedColors = colorReservation.length;
@@ -113,7 +114,7 @@ console.llog = exports.log = function (command, destination) {
   } else {
     let indexOfOldSibling = getIndexOfOldSibling(command);
     colorReservation[indexOfOldSibling].isClosed = true;
-
+    isClosed = true;
     let sibling = colorReservation[indexOfOldSibling];
 
     color = sibling.colors;
@@ -124,7 +125,8 @@ console.llog = exports.log = function (command, destination) {
     command: command,
     colors: color,
     indent: indent,
-    destination: destination
+    destination: destination,
+    isClosed: isClosed
   });
 
   let text = indents + colors[color](command);
@@ -135,3 +137,6 @@ console.llog = exports.log = function (command, destination) {
 exports.init = function () {
   colorReservation = [];
 };
+
+
+process.env.NODE_ENV = 'testing';
