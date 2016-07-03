@@ -38,6 +38,5 @@ logger(1);
 1
 ```
 
-## License
-
-MIT © [Otanim](http://otanim.com)
+##License
+LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-logger/blob/master/LICENSE.txt).
