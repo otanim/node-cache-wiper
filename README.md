@@ -1,4 +1,5 @@
 # Logger tool for [linguacode-api](https://github.com/LinguaCode/linguacode-api).
+**linguacode-logger** is a hyper recursive logger tool which helps to create simple charts for a complex hyper recursions.
 
 ## Install
 
