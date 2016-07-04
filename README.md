@@ -26,17 +26,17 @@ logger.log(message)
 
 ##### same as `logger.log`.
 ```javascript
-console.logg(message)
+console.llog(message)
 ```
 
 ##### prints single collapse's first `message`.
 ```javascript
-console.logg(message, 'begin')
+console.llog(message, 'begin')
 ```
 
 ##### prints single collapse's last `message`.
 ```javascript
-console.logg(message, 'end')
+console.llog(message, 'end')
 ```
 
 ##### reset the indent level.
