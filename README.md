@@ -20,19 +20,24 @@ logger.log(message)
 ```
 prints single `message`.
 
-```javascriptconsole.logg(message)```
+```javascript
+console.logg(message)
+```
 same as `logger.log`.
 
 ```javascript
 console.logg(message, 'begin')
 ```
 prints single collapse's first `message`.
+
 ```javascript
 console.logg(message, 'end')
 ```
 prints single collapse's last `message`.
 
-```javascript logger.init()` - reset the indent level.
+```javascript
+logger.init()
+``` - reset the indent level.
 
 ```javascript
 var logger = require('linguacode-logger');
