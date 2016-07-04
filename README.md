@@ -12,15 +12,27 @@ $ npm install https://github.com/LinguaCode/linguacode-logger --save
 ### Code
 ```javascript
 var logger = require('linguacode-logger');
-``` - require the **linguacode-logger** module.
+```
+require the **linguacode-logger** module.
 
-`logger.log(message)` - prints single `message`.
-`console.logg(message)` - same as `logger.log`.
+```javascript
+logger.log(message)
+```
+prints single `message`.
 
-`console.logg(message, 'begin')` - prints single collapse's first `message`.
-`console.logg(message, 'end')` - prints single collapse's last `message`.
+```javascriptconsole.logg(message)```
+same as `logger.log`.
 
-`logger.init()` - reset the indent level.
+```javascript
+console.logg(message, 'begin')
+```
+prints single collapse's first `message`.
+```javascript
+console.logg(message, 'end')
+```
+prints single collapse's last `message`.
+
+```javascript logger.init()` - reset the indent level.
 
 ```javascript
 var logger = require('linguacode-logger');
