@@ -77,4 +77,4 @@ single
 ```
 
 ##License
-LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-lloger/blob/master/LICENSE).
+LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-logger/blob/master/LICENSE).
