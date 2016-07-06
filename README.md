@@ -1,7 +1,10 @@
-# Logger tool for [linguacode-api](https://github.com/LinguaCode/linguacode-api).
+# Logger for [linguacode-api](https://github.com/LinguaCode/linguacode-api).
 
 ## Description
-**linguacode-logger** is a hyper recursive logger tool which helps to create simple charts for a complex hyper recursions.
+**linguacode-logger** is a hyper recursive logging tool which helps to create simple charts for a complex hyper recursions.
+
+## Screenshot
+![Screenshot](https://raw.githubusercontent.com/LinguaCode/linguacode-logger/master/screenshots/image.png)
 
 ## How to install
 
@@ -23,17 +26,17 @@ logger.log(message)
 
 ##### same as `logger.log`.
 ```javascript
-console.logg(message)
+console.llog(message)
 ```
 
 ##### prints single collapse's first `message`.
 ```javascript
-console.logg(message, 'begin')
+console.llog(message, 'begin')
 ```
 
 ##### prints single collapse's last `message`.
 ```javascript
-console.logg(message, 'end')
+console.llog(message, 'end')
 ```
 
 ##### reset the indent level.
@@ -74,4 +77,4 @@ single
 ```
 
 ##License
-LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-lloger/blob/master/LICENSE.txt).
+LinguaCode is [licensed under GPLv3](https://github.com/LinguaCode/linguacode-logger/blob/master/LICENSE).
