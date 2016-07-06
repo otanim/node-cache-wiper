@@ -99,8 +99,8 @@ let getLastIndentIndex = function (colorReservationList, command, destination) {
 };
 
 console.llog = exports.log = function (command, destination) {
-  let env = process.env.NODE_ENV;
-  if (env != 'testing') {
+  let env = process.env.DEBUG;
+  if (env != 'true') {
     return;
   }
 
