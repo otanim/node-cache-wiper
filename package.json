@@ -1,39 +1,33 @@
 {
-  "name": "linguacode-logger",
-  "version": "0.1.0",
-  "description": "Logger tool for linguacode-api",
+  "name": "node-cache-wiper",
+  "version": "0.0.1",
+  "description": "Cache wiper of the required modules.",
   "main": "index.js",
-  "homepage": "https://github.com/LinguaCode/linguacode-logger",
-  "author": "Arman Yeghiazaryann <otanim617@gmail.com> (http://otanim.github.com)",
+  "homepage": "https://github.com/otanim/node-cache-wiper",
+  "author": "Arman Yeghiazaryann <otanim617@gmail.com> (http://otanim.com)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LinguaCode/linguacode-logger"
+    "url": "git+https://github.com/otanim/node-cache-wiper"
   },
   "engines": {
-    "node": ">= 6.1.0"
+    "node": ">= 4.4.7"
   },
   "license": "SEE LICENSE file",
   "keywords": [
-    "linguacode-logger",
-    "linguacode-api",
-    "linguacode",
-    "lingua",
-    "logger",
-    "code"
-  ],
-  "dependencies": {
-    "lodash": "^4.11.1",
-    "colors": "^1.1.2"
-  },
+    "js",
+    "es5",
+    "node",
+    "cache",
+    "wiper",
+    "node.js",
+    "require",
+    "cache-wiper",
+    "node-cache-wiper"
+    ],
   "scripts": {
     "start": "node index.js"
   },
   "bugs": {
-    "url": "https://github.com/LinguaCode/linguacode-logger/issues"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "sinon": "^1.17.4",
-    "sinon-chai": "^2.8.0"
+    "url": "https://github.com/otanim/node-cache-wiper/issues"
   }
 }
