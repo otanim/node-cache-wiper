@@ -15,9 +15,8 @@ $ npm install https://github.com/otanim/node-cache-wiper --save
 var cacheWiper = require('node-cache-wiper');
 var serverPath = './src/server';
 var server = require(serverPath); //content of the "server" file now was cached
-
-cacheWiper(serverPath); //cache of the "server" file now was wiped
-server = require(serverPath); //content of the "server" file now was AGAIN cached
+cacheWiper(serverPath);           //cache of the "server" file now was wiped
+server = require(serverPath);     //content of the "server" file now was AGAIN cached
 ```
 
 
