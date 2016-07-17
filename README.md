@@ -1,7 +1,7 @@
 # node-cache-wiper
 
 ## Description
-**node-cache wiper** is a cache wiper of the required modules.
+**node-cache-wiper** is a cache wiper of the required modules in Node.js.
 
 ## How to install
 
