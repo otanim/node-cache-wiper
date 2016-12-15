@@ -14,11 +14,14 @@ $ npm install https://github.com/otanim/node-cache-wiper --save
 ### Usage
 
 ```javascript
-var cacheWiper = require('node-cache-wiper');
-var serverPath = './src/server';
-var server = require(serverPath); //content of the "server" file now was cached
+const cacheWiper = require('node-cache-wiper');
+
+const serverPath = './src/server';
+var server = require(serverPath);   //content of the "server" file now was cached
+
 cacheWiper(serverPath);             //cache of the "server" file now was wiped
-server = require(serverPath);     //content of the "server" file now was cached AGAIN
+
+server = require(serverPath);       //content of the "server" file now was cached AGAIN
 ```
 
 
